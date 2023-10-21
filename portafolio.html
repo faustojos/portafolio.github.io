@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio</title>
+  <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body class="grid-container">
+  <header class="header">
+    <h1>Bienvenido a mi Portafolio</h1>
+  </header>
+  <nav class="navbar"><p> Soy David Fausto Jose, 
+    soy estudiante de la carrera de ingeniería en 
+    desarrollo de software</p></nav>
+  <aside class="sidebar">BARRA LATERAL</aside>
+  <article class="main">
+    <h1>MENU PRINCIPAL</h1>
+    <ul>
+      <li>HISTORIA</li>
+      <li>BIBLIOGRAFÍA</li>
+      <li>CARTERA</li>
+      <li>FOTOS</li>
+  </ul>
+  </article>
+  <footer class="footer">BÚSQUENME EN LA REDES SOCIALES</footer>
+</body>
+</html>

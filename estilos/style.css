@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+}
+html {
+  height: 100%;
+  background-image: url(/Portafolio/img/fondo1.png);
+}
+body {
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.2rem;
+  min-height: 100%;
+  background-color: rgb(31, 32, 31);
+}
+
+.grid-container > * {
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+
+}
+
+.header {
+  background-image: url(/Portafolio/img/fondopri.png);
+  background-size: cover;
+  background-position: center;
+  grid-area: header;
+  font-weight: bold;
+  background-image: linear-gradient(180deg, #fff533 0, #e4f337 10%, 
+  #c8ed3d 20%, #aae544 30%, #8bda4b 40%, 
+  #6acc50 50%, #47be55 60%, #19b25a 70%, #00a75f 80%,
+   #009e64 90%, #00966b 100%);
+}
+.header h1 {
+  color: rgb(4, 14, 7);
+  font-family:  Verdana, Geneva, sans-serif;
+  margin: 0; /* Elimina el margen predeterminado del encabezado h1 */
+  padding: 20px; /* Espaciado interno del encabezado h1 */
+  background-color: rgba(227, 236, 221, 0.041); /* Fondo semitransparente para el encabezado h1 */
+
+}
+.navbar {
+  grid-area: navbar;
+  background-color: #d1c9a6;
+  font-family: cursive;
+  background-image: radial-gradient(circle at 58% 20.14%, #cf8edc 0, #b379d7 16.67%, #8f64d1 33.33%,
+   #5f50cc 50%, #0040c7 66.67%, #0036c2 83.33%, #0030bd 100%);
+}
+.sidebar {
+  grid-area: sidebar;
+  background-color: #0e9fe2c4;
+  font-weight: bold;
+  background-image: radial-gradient(circle at 58% 20.14%, #ff90ce 0, #ff8fbf 3.33%, #ff90b0 6.67%, 
+  #ff91a1 10%, #ff9493 13.33%, #ff9885 16.67%, #ff9d78 20%, #ffa26c 23.33%, #ffa862 26.67%,
+   #ffae58 30%, #ffb351 33.33%, #f3b94c 36.67%, #e6be49 40%, #d9c348 43.33%, #cac84b 46.67%,
+    #bbcc50 50%, #abd057 53.33%, #9ad361 56.67%, #87d66c 60%, #73d878 63.33%, #5adb86 66.67%,
+     #39dc94 70%, #00dea3 73.33%, #00dfb3 76.67%, #00dfc2 80%, #00e0d2 83.33%, #00e0e1 86.67%,
+      #00dff0 90%, #00defe 93.33%, #00ddff 96.67%, #00dbff 100%);
+}
+.main {
+  grid-area: main;
+  background-color: #d3ff10da;
+  font-weight: bold;
+  background-image: radial-gradient(circle at 50% 50%, #e9cc88 0, #e2be79 16.67%, #d9ac66 33.33%, #cc9750 50%, #bf823b 66.67%, #b6702c 83.33%, #af6121 100%);
+}
+h1 {
+  font-size: 24px; /* Tamaño de fuente */
+  color: #f7fcf6; /* Color del texto */
+  text-align: center; /* Alineación del texto */
+  margin-top: 20px; /* Espacio superior */
+}
+
+/* Estilos para la lista no ordenada (UL) */
+ul {
+  list-style: none; /* Elimina los puntos de la lista */
+  padding: 0; /* Elimina el relleno predeterminado */
+  text-align: center; /* Alineación del texto */
+}
+
+/* Estilos para los elementos de la lista (LI) */
+li {
+  display: inline; /* Hace que los elementos estén en línea uno al lado del otro */
+  margin: 0 10px; /* Espacio horizontal entre elementos */
+  font-size: 18px; /* Tamaño de fuente */
+  color: #c6f105; /* Color del texto */
+  text-transform: uppercase; /* Convierte el texto en mayúsculas */
+}
+
+/* Estilos cuando se pasa el mouse sobre un elemento de la lista */
+li:hover {
+  color: #070be9; /* Cambiar el color al pasar el mouse */
+  cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+}
+.footer {
+  grid-area: footer;
+  background-color: #ebe7de65;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template:
+    "header"  auto
+    "navbar"  75px
+    "main"    auto
+    "sidebar" 100px
+    "footer"  100px;
+}
+@media (min-width: 600px) {
+  .grid-container {
+   /*grid-template-columns: 200px auto;
+    grid-template-rows: 100px 50px auto 100px;
+    grid-template-areas:
+    "header  header"
+    "navbar  navbar"
+    "sidebar main"
+    "footer  footer"; */
+    grid-template:     
+      "header  header" 100px
+      "navbar  navbar" 75px
+      "sidebar main"   auto
+      "footer  footer" 100px /
+      200px    auto;
+  }
+}
+@media (min-width: 800px) {
+  .grid-container {
+    grid-template:
+      "header  header header"  100px
+      "navbar  main   sidebar" auto
+      "footer  footer footer"  100px /
+      200px    auto   200px;
+  }
+}
+/* Estilos generales */
+/*.grid-container {
+  display: flex; /* Aplicamos Flexbox al contenedor principal */
+  /*flex-direction: column; /* Organizamos los elementos en columnas */
+  /*justify-content: space-between; /* Distribuimos el espacio verticalmente entre los elementos */
+  /*align-items: center; /* Centramos horizontalmente los elementos en el contenedor */
+/*}
+
+/*.header,
+.navbar,
+.main,
+.footer {
+  flex: 1; /* Hacemos que los elementos ocupen todo el espacio vertical disponible */
+/*}
